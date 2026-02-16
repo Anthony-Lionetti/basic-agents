@@ -1,0 +1,41 @@
+[
+  {
+    "prompt_inputs": {
+      "task": "Write a Python script that reads a CSV file named 'employees.csv' containing columns: name, department, and salary. Filter the data to show only employees earning above $75,000 per year, and write the filtered results to a new CSV file called 'high_earners.csv'. The script should handle file I/O operations and include basic error handling."
+    },
+    "solution_criteria": [
+      "Script correctly reads the input CSV file and parses employee records",
+      "Implements conditional filtering logic to identify employees with salary > $75,000",
+      "Writes filtered results to output CSV file with proper formatting",
+      "Includes error handling for missing files or invalid data"
+    ],
+    "task_description": "Tests the ability for an llm to generate a python script to execute csv based jobs based on a plain language description",
+    "scenario": "Testing with a simple data filtering task: Generate a Python script that reads a CSV file of employee records and outputs only those earning above a specified salary threshold, demonstrating basic CSV parsing, conditional logic, and output generation"
+  },
+  {
+    "prompt_inputs": {
+      "task": "I have a sales.csv file with columns: transaction_id, product_name, category, quantity, unit_price, and date. I need a Python script that reads this CSV, groups all transactions by product category, calculates the total revenue (quantity \u00d7 unit_price) for each category, and writes the results to a new file called category_revenue.csv with columns: category and total_revenue, sorted by total_revenue in descending order."
+    },
+    "solution_criteria": [
+      "Script correctly reads CSV file and groups transactions by category",
+      "Script calculates total revenue per category (quantity \u00d7 unit_price multiplication)",
+      "Script writes results to CSV with category and total_revenue columns",
+      "Results are sorted by total_revenue in descending order"
+    ],
+    "task_description": "Tests the ability for an llm to generate a python script to execute csv based jobs based on a plain language description",
+    "scenario": "Testing with a data aggregation and transformation task: Generate a Python script that processes a sales CSV file to group transactions by product category, calculate total revenue per category, and write results to a new CSV, testing grouping operations and numerical calculations"
+  },
+  {
+    "prompt_inputs": {
+      "task": "I have two CSV files: 'customers.csv' containing customer_id, name, and email columns, and 'orders.csv' containing order_id, customer_id, product, and amount columns. Write a Python script that reads both files, joins them on customer_id, and exports a new CSV file called 'enriched_orders.csv' with columns: order_id, customer_id, name, email, product, and amount."
+    },
+    "solution_criteria": [
+      "Script correctly reads both CSV files using pandas or standard library",
+      "Script performs an inner join on customer_id to match records between files",
+      "Script includes all required columns in the correct order in the output",
+      "Script exports results to 'enriched_orders.csv' without errors"
+    ],
+    "task_description": "Tests the ability for an llm to generate a python script to execute csv based jobs based on a plain language description",
+    "scenario": "Testing with a multi-file join operation: Generate a Python script that reads two related CSV files (customers and orders), matches records by customer ID, enriches order data with customer information, and exports the merged results, testing file I/O, data matching, and column manipulation"
+  }
+]
